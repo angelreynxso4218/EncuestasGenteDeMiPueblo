@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gente de mi Pueblo – Resultados de la encuesta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <nav class="nav" aria-label="Secciones">
+    <a href="#perfil" data-nav="perfil">Perfil</a>
+    <a href="#identidad" data-nav="identidad">Identidad visual</a>
+    <a href="#quieren" data-nav="quieren">Qué quieren</a>
+    <a href="#problema" data-nav="problema">Problema detectado</a>
+    <a href="#hallazgo" data-nav="hallazgo">Hallazgo</a>
+    <a href="#conclusion" data-nav="conclusion">Conclusión</a>
+  </nav>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Tipo de valor">
+      <button type="button" class="seg-btn is-active" data-mode="pct" aria-pressed="true">Porcentaje</button>
+      <button type="button" class="seg-btn" data-mode="n" aria-pressed="false">Personas</button>
+    </div>
+    <label class="switch">
+      <input type="checkbox" class="toggle-bars" checked>
+      <span class="track" aria-hidden="true"></span>
+      <span class="switch-label">Barras</span>
+    </label>
+  </div>
+</header>
+
+<header class="topbar" id="topbar-extra" hidden>
+  <nav class="nav" aria-label="Secciones de datos adicionales">
+    <a href="#resultados" class="back">← Volver a los resultados</a>
+    <a href="#adicional-preguntas" data-nav="adicional-preguntas">Resto de las preguntas</a>
+    <a href="#adicional-cruces" data-nav="adicional-cruces">Cruces</a>
+    <a href="#adicional-abiertas" data-nav="adicional-abiertas">Respuestas abiertas</a>
+    <a href="#adicional-individuales" data-nav="adicional-individuales">Respuestas individuales</a>
+  </nav>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Tipo de valor">
+      <button type="button" class="seg-btn is-active" data-mode="pct" aria-pressed="true">Porcentaje</button>
+      <button type="button" class="seg-btn" data-mode="n" aria-pressed="false">Personas</button>
+    </div>
+    <label class="switch">
+      <input type="checkbox" class="toggle-bars" checked>
+      <span class="track" aria-hidden="true"></span>
+      <span class="switch-label">Barras</span>
+    </label>
+  </div>
+</header>
+<div id="view-main">
+<section class="hero">
+  <div class="wrap">
+    <h1>Gente de mi Pueblo</h1>
+    <p class="hero-sub">Encuesta sobre la identidad visual del programa</p>
+    <p class="hero-base">Base: 106 personas encuestadas</p>
+  </div>
+</section>
+
+<main class="wrap" id="resultados">
+
+  <details class="howto">
+    <summary>Cómo leer estos datos</summary>
+    <div class="howto-body">
+      <p><span class="tag">Respuesta única</span> Cada persona eligió una sola opción, por eso los porcentajes del bloque suman 100%.</p>
+      <p><span class="tag tag-multi">Opción múltiple</span> Cada persona pudo elegir varias opciones, por eso la suma supera el 100%.</p>
+      <p>Con el selector de arriba podés ver cada dato como porcentaje o como cantidad de personas. Pasando el cursor sobre una fila aparece el detalle.</p>
+    </div>
+  </details>
+
+  <section id="perfil" class="sec" data-section>
+    <h2>Perfil</h2>
+    <div class="grid" id="grid-perfil"></div>
+  </section>
+
+  <section id="identidad" class="sec" data-section>
+    <h2>Identidad visual</h2>
+    <div class="grid" id="grid-identidad"></div>
+  </section>
+
+  <section id="quieren" class="sec" data-section>
+    <h2>Qué quieren</h2>
+    <div class="grid" id="grid-quieren"></div>
+  </section>
+
+  <section id="problema" class="sec" data-section>
+    <h2>Problema detectado</h2>
+    <div class="grid grid-3" id="grid-problema"></div>
+  </section>
+
+  <section id="hallazgo" class="sec" data-section>
+    <h2>Hallazgo relevante</h2>
+    <div class="text">
+      <p>Lo más importante que muestra la encuesta es una distancia entre el valor que el público le da al programa y lo que transmite su imagen.</p>
+      <p>Casi todos consideran fundamental una identidad visual profesional y la mayoría quiere que el nuevo logo exprese lo riojano, pero hoy son pocos quienes sienten que el logo actual lo hace.</p>
+      <p>Además, el logo se parece al cartel de la Ruta 40, y esa confusión aparece de forma espontánea. La mitad de las personas no lo identifica con claridad y una parte importante lo ve poco vigente.</p>
+    </div>
+  </section>
+
+  <section id="conclusion" class="sec sec-last" data-section>
+    <div class="conclusion">
+      <h2>Conclusión final para el proyecto</h2>
+      <p>El proyecto debe encarar un rediseño evolutivo y adaptarlo para que pueda aplicarse a distintos formatos físicos y digitales.</p>
+      <p>El público quiere que la identidad riojana sea el centro del nuevo logo, que se diferencie claramente del cartel de la Ruta 40 y que combine tradición con un aire más moderno y cercano.</p>
+      <p>Casi todas las personas consideran importante una identidad visual coherente y profesional, por eso el nuevo diseño debe conservar lo que el público ya reconoce, como el nombre y un símbolo característico, y mantenerse consistente en todos sus usos para fortalecer el reconocimiento del programa, sobre todo entre quienes hoy no lo identifican con claridad.</p>
+    </div>
+  </section>
+
+  <div class="extra-cta">
+    <p>Información complementaria: el resto de las preguntas, cruces por género, edad y localidad, temas de las respuestas abiertas y las respuestas individuales.</p>
+    <a class="btn-extra" href="#datos-adicionales">Ver datos adicionales →</a>
+  </div>
+</main>
+</div>
+<div id="view-extra" hidden>
+<section class="hero hero-lite"><div class="wrap">
+  <h1>Datos adicionales</h1>
+  <p class="hero-sub">Información complementaria de la encuesta</p>
+  <p class="hero-base">Base: 106 personas encuestadas · Consulta secundaria, sin nombres ni correos</p>
+</div></section>
+<main class="wrap">
+  <section id="adicional-preguntas" class="sec" data-section><h2>Resto de las preguntas</h2><div class="grid" id="grid-adicional-preguntas"></div></section>
+  <section id="adicional-cruces" class="sec" data-section><h2>Cruces por género, edad y localidad</h2><div class="grid" id="grid-adicional-cruces"></div></section>
+  <section id="adicional-abiertas" class="sec" data-section><h2>Temas de las respuestas abiertas</h2><div class="grid" id="grid-adicional-abiertas"></div></section>
+  <section id="adicional-individuales" class="sec sec-last" data-section><h2>Respuestas individuales</h2>
+    <p class="extra-note">Una fila por persona, en el orden de la planilla. Tocá una fila para ver todas sus respuestas. Las respuestas 57 y 58 parecen un envío duplicado (mismo correo y mismas respuestas); se dejan para respetar las 106.</p>
+    <div class="tbl-controls">
+      <input id="q" type="search" placeholder="Buscar en todas las respuestas" aria-label="Buscar">
+      <select id="f-g" data-all="Género" aria-label="Género"></select>
+      <select id="f-e" data-all="Edad" aria-label="Edad"></select>
+      <select id="f-l" data-all="Localidad" aria-label="Localidad"></select>
+      <select id="f-c" data-all="Conoce el programa" aria-label="Conoce el programa"></select>
+      <button type="button" id="clear" class="seg-btn">Limpiar</button>
+    </div>
+    <p class="mut" id="count" aria-live="polite"></p>
+    <div class="xwrap tall"><table class="xt it"><thead><tr><th>N°</th><th>Género</th><th>Edad</th><th>Localidad</th><th>Ocupación</th><th>Programa</th><th>Logo</th><th>Vigencia</th><th>Estética</th><th>Mantener</th><th>Novedades</th></tr></thead><tbody id="tbody"></tbody></table></div>
+  </section>
+</main>
+</div>
+
+
+<script src="extra-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
