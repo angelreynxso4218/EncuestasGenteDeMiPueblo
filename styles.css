@@ -176,5 +176,45 @@ main{padding-bottom:max(72px,30vh)}
 .tbl-controls input{flex:1;min-width:220px}
 .tbl-controls .seg-btn{border:1.5px solid var(--line)}
 
+/* Celular */
+.nav{position:relative}
+@media (max-width:700px){
+  html{-webkit-text-size-adjust:100%}
+  .topbar{padding:8px 12px;gap:8px}
+  .nav{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;gap:2px;margin:0 -12px;padding:0 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{flex:none;white-space:nowrap;padding:8px 13px;font-size:14px}
+  .controls{flex:1 1 100%;flex-wrap:wrap;justify-content:space-between;gap:8px 12px}
+  .seg-btn,.theme-btn{min-height:36px}
+  .hero{padding:36px 0 32px}
+  .hero-lite{padding:30px 0 26px}
+  .hero-in{flex-direction:column;align-items:flex-start;gap:18px}
+  .hero-logo{height:96px}
+  .hero-lite .hero-logo{height:64px}
+  .hero-text{width:100%;padding:18px 0 0;border-left:0;border-top:2px solid rgba(227,198,152,.35)}
+  .sec{margin-top:48px}
+  .card{padding:20px 18px 16px;border-radius:18px}
+  .big{font-size:44px}
+  .extra-cta{padding:18px;gap:14px}
+  .btn-extra{width:100%;text-align:center}
+  .conclusion{padding:28px 20px 22px}
+  .xt:not(.it){min-width:480px}
+  .tbl-controls input{flex:1 1 100%}
+  .tbl-controls select{flex:1 1 calc(50% - 5px);min-width:0}
+  .tbl-controls .seg-btn{flex:1 1 100%}
+  .xwrap.tall{max-height:none;border:0;border-radius:0;overflow:visible}
+  .it{min-width:0}
+  .it thead{display:none}
+  .it,.it tbody{display:block}
+  .it .ir{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;padding:14px 16px;margin-bottom:10px;border:2px solid var(--line);border-radius:16px;background:var(--card)}
+  .it td{display:block;padding:0;border:0}
+  .it td::before{content:attr(data-label);display:block;font-size:12px;font-weight:600;color:var(--muted)}
+  .it td:first-child{grid-column:1 / -1;font-weight:700}
+  .it td:first-child::before{display:inline;margin-right:6px}
+  .it .detail{display:block;margin:0 0 10px}
+  .it .detail td{display:block;padding:14px 16px;border:2px solid var(--line);border-radius:16px}
+  .detail dl{grid-template-columns:1fr}
+}
+
 /* Modo oscuro: solo se activa con el botón (no depende del sistema) */
 :root[data-theme="dark"]{--bg:#2d2200;--card:#382b05;--ink:#e3c698;--muted:rgba(227,198,152,.8);--line:rgba(227,198,152,.45);--rule:#e3c698;--track:rgba(227,198,152,.22);--fill:#e3c698;--hero-bg:#1f1700;--topbar-bg:rgba(45,34,0,.95);--nav-on-bg:#e3c698;--nav-on-ink:#2d2200;--seg-bg:rgba(227,198,152,.12);--hover:rgba(227,198,152,.12);--tag-bg:rgba(227,198,152,.2);--tag-ink:#e3c698;--tag2-bg:#e3c698;--tag2-ink:#2d2200;color-scheme:dark}

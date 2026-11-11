@@ -193,6 +193,7 @@
 
   // Tabla de respuestas individuales (sin nombres ni correos)
   function setupTable() {
+    var LABELS = ['N°', 'Género', 'Edad', 'Localidad', 'Ocupación', 'Programa', 'Logo', 'Vigencia', 'Estética', 'Mantener', 'Novedades'];
     var data = X.individuales, body = $('#tbody'), q = $('#q'), cnt = $('#count'), open = {};
     var sels = { g: $('#f-g'), e: $('#f-e'), l: $('#f-l'), c: $('#f-c') };
     data.forEach(function (r) {
@@ -213,7 +214,7 @@
         if (t && r._s.indexOf(t) < 0) return;
         n++;
         html += '<tr class="ir" data-id="' + r.id + '" tabindex="0" aria-expanded="' + (open[r.id] ? 'true' : 'false') + '">' +
-          [r.id, r.g, r.e, r.l, r.o, r.c, r.r, r.v, r.s, r.k, r.n].map(function (v) { return '<td>' + esc(v) + '</td>'; }).join('') + '</tr>';
+          [r.id, r.g, r.e, r.l, r.o, r.c, r.r, r.v, r.s, r.k, r.n].map(function (v, i) { return '<td data-label="' + LABELS[i] + '">' + esc(v) + '</td>'; }).join('') + '</tr>';
         if (open[r.id]) {
           html += '<tr class="detail"><td colspan="11"><dl>' + (r.d.length ? r.d.map(function (x) { return '<div><dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd></div>'; }).join('') : '<div><dd>Sin respuestas adicionales.</dd></div>') + '</dl></td></tr>';
         }
@@ -257,7 +258,13 @@
       $$('[data-nav]', curBar()).forEach(function (a) {
         var on = a.getAttribute('data-nav') === id;
         a.classList.toggle('is-active', on);
-        if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        if (on) {
+          a.setAttribute('aria-current', 'true');
+          var nv = a.parentNode;
+          if (nv.scrollWidth > nv.clientWidth + 2) {
+            try { nv.scrollTo({ left: a.offsetLeft - (nv.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' }); } catch (err) { nv.scrollLeft = a.offsetLeft; }
+          }
+        } else a.removeAttribute('aria-current');
       });
     }
     function update() {
