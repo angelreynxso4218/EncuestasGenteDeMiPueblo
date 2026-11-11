@@ -292,6 +292,15 @@
     syncHeader(); update();
   }
 
+  // Tema: siempre arranca en modo claro; el modo oscuro solo se enciende con el botón
+  function setTheme(dark) {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    $$('.theme-btn').forEach(function (b) {
+      b.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      $('.theme-label', b).textContent = dark ? 'Modo claro' : 'Modo oscuro';
+    });
+  }
+
   function init() {
     viewMain = $('#view-main'); viewExtra = $('#view-extra'); barMain = $('#topbar'); barExtra = $('#topbar-extra');
     render();
@@ -305,6 +314,10 @@
         $$('.toggle-bars').forEach(function (o) { o.checked = cb.checked; });
       });
     });
+    $$('.theme-btn').forEach(function (b) {
+      b.addEventListener('click', function () { setTheme(document.documentElement.getAttribute('data-theme') !== 'dark'); });
+    });
+    setTheme(false);
     observeBars();
     setupNav();
     window.addEventListener('hashchange', function () { route(false); });

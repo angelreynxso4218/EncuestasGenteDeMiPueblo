@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<link rel="icon" type="image/png" href="assets/Favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gente de mi Pueblo – Resultados de la encuesta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +32,7 @@
       <span class="track" aria-hidden="true"></span>
       <span class="switch-label">Barras</span>
     </label>
+    <button type="button" class="theme-btn" aria-pressed="false"><span class="theme-ic" aria-hidden="true"></span><span class="theme-label">Modo oscuro</span></button>
   </div>
 </header>
 
@@ -51,14 +54,18 @@
       <span class="track" aria-hidden="true"></span>
       <span class="switch-label">Barras</span>
     </label>
+    <button type="button" class="theme-btn" aria-pressed="false"><span class="theme-ic" aria-hidden="true"></span><span class="theme-label">Modo oscuro</span></button>
   </div>
 </header>
 <div id="view-main">
 <section class="hero">
-  <div class="wrap">
-    <h1>Gente de mi Pueblo</h1>
-    <p class="hero-sub">Encuesta sobre la identidad visual del programa</p>
-    <p class="hero-base">Base: 106 personas encuestadas</p>
+  <div class="wrap hero-in">
+    <img class="hero-logo" src="assets/BannerLogo.png" alt="Logo de Gente de mi Pueblo, Raíces Riojanas" width="283" height="360">
+    <div class="hero-text">
+      <h1>Gente de mi Pueblo</h1>
+      <p class="hero-sub">Encuesta sobre la identidad visual del programa</p>
+      <p class="hero-base">Base: 106 personas encuestadas</p>
+    </div>
   </div>
 </section>
 
@@ -118,10 +125,13 @@
 </main>
 </div>
 <div id="view-extra" hidden>
-<section class="hero hero-lite"><div class="wrap">
-  <h1>Datos adicionales</h1>
-  <p class="hero-sub">Información complementaria de la encuesta</p>
-  <p class="hero-base">Base: 106 personas encuestadas · Consulta secundaria, sin nombres ni correos</p>
+<section class="hero hero-lite"><div class="wrap hero-in">
+  <img class="hero-logo" src="assets/BannerLogo.png" alt="Logo de Gente de mi Pueblo, Raíces Riojanas" width="283" height="360">
+  <div class="hero-text">
+    <h1>Datos adicionales</h1>
+    <p class="hero-sub">Información complementaria de la encuesta</p>
+    <p class="hero-base">Base: 106 personas encuestadas · Consulta secundaria, sin nombres ni correos</p>
+  </div>
 </div></section>
 <main class="wrap">
   <section id="adicional-preguntas" class="sec" data-section><h2>Resto de las preguntas</h2><div class="grid" id="grid-adicional-preguntas"></div></section>
